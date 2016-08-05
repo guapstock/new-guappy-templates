@@ -5,31 +5,56 @@
 	<meta content = "width=device-width, initial-scale = 1" name="viewport">
 	<link rel = "stylesheet" type = "text/css" href = "loginpage.css"/>
 	<style>
-	@-webkit-keyframes animatedBackground {
-    	from { background-position: 0% 0%; }
-    	to { background-position: 100% 100%; }
-    }
-    @-moz-keyframes animatedBackground{
-    	from { background-position: 0% 0%; }
-    	to { background-position: 100% 100%; }
-    }
-    @-o-keyframes animatedBackground{
-    	from { background-position: 0% 0%; }
-    	to { background-position: 100% 100%; }
-    }
-    @keyframes animatedBackground {
-    	from { background-position: 0% 0%; }
-    	to { background-position: 100% 100%; }
+    	@-webkit-keyframes animatedBackground {
+        	from { background-position: 0% 0%; }
+        	to { background-position: 100% 100%; }
+        }
+        @-moz-keyframes animatedBackground{
+        	from { background-position: 0% 0%; }
+        	to { background-position: 100% 100%; }
+        }
+        @-o-keyframes animatedBackground{
+        	from { background-position: 0% 0%; }
+        	to { background-position: 100% 100%; }
+        }
+        @keyframes animatedBackground {
+        	from { background-position: 0% 0%; }
+        	to { background-position: 100% 100%; }
 
-    }
+        }
+
+        .my-svg-container{
+         display: block;
+         position: relative;
+         width: 20%;
+         padding-bottom: 60%; /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
+         margin: auto;
+         vertical-align: middle; /* top | middle | bottom ... do what you want */
+        }
+
+
+        .my-svg{ /* svg into : object, img or inline */
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%; /* only required for <img /> */
+        }
+                
+    
     </style>
+    <!-- For production purposes we need to actually not pull all of these from a cdn, and we need to instead just install them locally -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="height: 200px; width: 450px;">
-    <image xlink:href="https://a.pomf.cat/xyylzs.svg" x="0" y="0" width="50%" height="100%" ></image> 
-    </svg>    
+            <div class="my-svg-container">
+                    <svg class="my-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 800 960">
+                        <image class="ri_logo" xlink:href="https://a.pomf.cat/xyylzs.svg" x="0" y="0" width="50%" height="100%" ></image> 
+                    </svg>    
+               
+            </div>
 </body>
 </html>
