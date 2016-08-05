@@ -26,20 +26,27 @@
         .my-svg-container{
          display: block;
          position: relative;
-         width: 20%;
-         padding-bottom: 60%; /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
-         margin: auto;
+         width: 30%;
+         margin: 0 auto;
+         text-align: center;
+         padding-bottom: 30%; /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
          vertical-align: middle; /* top | middle | bottom ... do what you want */
         }
 
 
         .my-svg{ /* svg into : object, img or inline */
           display: block;
-          position: absolute;
+          position: relative;
           top: 0;
           left: 0;
+          margin:0 auto;
           width: 100%; /* only required for <img /> */
+
+            left:30% ;
+            top:50% ;
         }
+
+
                 
     
     </style>
@@ -50,11 +57,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
 </head>
 <body>
+        <center>
             <div class="my-svg-container">
-                    <svg class="my-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 800 960">
-                        <image class="ri_logo" xlink:href="https://a.pomf.cat/xyylzs.svg" x="0" y="0" width="50%" height="100%" ></image> 
+                    <svg class="my-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 500">
+                        <image class="ri_logo" xlink:href="https://a.pomf.cat/xyylzs.svg" width="50%" height="100%" ></image> 
                     </svg>    
                
             </div>
+        </center>
 </body>
 </html>
