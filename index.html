@@ -3,7 +3,9 @@
 	<meta charset="utf-8">
 	<title> guap login </title>
 	<meta content = "width=device-width, initial-scale = 1" name="viewport">
-	<link rel = "stylesheet" type = "text/css" href = "loginpage.css"/>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
 	<style>
     	@-webkit-keyframes animatedBackground {
         	from { background-position: 0% 0%; }
@@ -27,12 +29,16 @@
          display: block;
          position: relative;
          width: 30%;
+         height:30px;
          margin: 0 auto;
          text-align: center;
-         padding-bottom: 30%; /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
+         padding-bottom: 20%; /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
          vertical-align: middle; /* top | middle | bottom ... do what you want */
+
+
         }
 
+        .my-svg:hover { transform: scale(1.1); }
 
         .my-svg{ /* svg into : object, img or inline */
           display: block;
@@ -42,28 +48,59 @@
           margin:0 auto;
           width: 100%; /* only required for <img /> */
 
-            left:30% ;
-            top:50% ;
+            left:35% ;
+            top:-20% ;
+        -webkit-transition: all 100ms linear;
+        -moz-transition: all 100ms linear;
+        -ms-transition: all 100ms linear;
+        -o-transition: all 100ms linear;
+        transition: all 100ms linear;
+        transform-origin: 50% 50%;
         }
-
-
                 
-    
+        /* Button 6 */
+.btn-6 {
+    color: #fff;
+    background: #226fbe;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+#centered{
+       position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: -60px;
+    margin: auto;
+    padding-bottom:50%;
+
+}
+
     </style>
     <!-- For production purposes we need to actually not pull all of these from a cdn, and we need to instead just install them locally -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
+    <!--<script src="popmotion.global.min.js"></script>-->
+
 </head>
 <body>
+    <div id="centered">
         <center>
-            <div class="my-svg-container">
-                    <svg class="my-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 500">
-                        <image class="ri_logo" xlink:href="https://a.pomf.cat/xyylzs.svg" width="50%" height="100%" ></image> 
+            <div id="logo" class="my-svg-container">
+                    <svg class="my-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 320 320">
+                        <image class="ri_logo" xlink:href="https://a.pomf.cat/xyylzs.svg" width="30%" height="100%" ></image> 
                     </svg>    
-               
             </div>
+                <p>
+                    <button class="btn btn-6 btn-6c">Sign Up</button>
+                    <button class="btn btn-6 btn-6c">Log In</button>
+                </p>
         </center>
+    </div>
 </body>
 </html>
