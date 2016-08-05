@@ -1,2 +1,2 @@
 # new-guappy-templates
-new sexy templates
+new, good looking templates
